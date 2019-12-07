@@ -1,0 +1,5 @@
+<p>Lista de Filmes: </p>
+
+<div class="collection">
+        <a class="collection-item" *ngFor = "let film of films" [routerLink] = "['/film', film.id]"> {{ film.name }} </a>
+</div>

@@ -1,0 +1,17 @@
+  <nav>
+    <div class="nav-wrapper">
+      <a routerLink= "" class="brand-logo right">Star Wars Films</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li routerLinkActive="active"><a routerLink= "/login"> Login</a></li>
+        <li routerLinkActive="active"><a routerLink= "/films" [queryParams]="{pagina:1}"> Films</a></li>
+        <li routerLinkActive="active"><a [routerLink]= "['film', idFilm.value]"> Film Id</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container"> 
+    <p> Entre com o id do Filme: </p>
+    <input #idFilm>
+    <router-outlet></router-outlet>
+  </div>
+
