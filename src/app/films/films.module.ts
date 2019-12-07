@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+//import { RouterModule } from '@angular/router';
 
 import { FilmsService } from './films.service';
 import { LoginComponent } from './../login/login.component';
 import { FilmNotFindComponent } from './film-not-find/film-not-find.component';
 import { FilmDetailComponent } from './film-detail/film-detail.component';
 import { FilmsComponent } from './films.component';
+import { FilmsRoutingModule } from './films.routing.module';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { FilmsComponent } from './films.component';
     ],
     imports: [ 
         CommonModule,
-        RouterModule
+        FilmsRoutingModule
+        //RouterModule
      ],
     exports: [],
     providers: [
