@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FilmFormsService } from './film-forms.service';
 
 @Component({
   selector: 'app-film-forms',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FilmFormsComponent implements OnInit {
 
-  constructor() { }
+ private filmsForms : any [] = [];
+
+  constructor(private filmFormService: FilmFormsService ) { }
 
   ngOnInit() {
+    this.filmsForms = this.filmFormService.getFilmsForm();
   }
 
 }

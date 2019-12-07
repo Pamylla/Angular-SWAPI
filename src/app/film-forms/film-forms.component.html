@@ -1,4 +1,8 @@
-<p>film-forms works!</p>
-
+<p> Lista de Filmes: </p>
+<div class="collection">
+    <a  *ngFor ="let filmForm of filmsForms" class="collection-item">
+        {{ filmForm.name }}
+    </a>
+  </div>
 <router-outlet></router-outlet>
 
