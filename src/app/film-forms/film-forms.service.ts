@@ -1,8 +1,9 @@
+//import { Film } from './film-form';
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+
+@Injectable({providedIn: 'root'})
+
 export class FilmFormsService {
 
   private filmsForms : any [] = [
@@ -11,10 +12,18 @@ export class FilmFormsService {
     { id: 3, name: 'Filme 3', episode: 'Episode 3' }
   ]
 
+  getFilmsForm(){
+    return this.filmsForms;
+  };
 
-getFilmsForm(){
-  return this.filmsForms;
-};
+  getFilmForm(id: number){
+    for (let i=0; i<this.filmsForms.length; i++){
+      let filmForm = this.filmsForms[i];
+      if(filmForm.id == id){
+        return filmForm;
+      }
+    }return null;
+  }
 
   constructor() { }
 }

@@ -6,6 +6,7 @@ import { FormComponent } from './form/form.component';
 import { DetailComponent } from './detail/detail.component';
 import { FilmFormsRoutingModule } from './film-forms.routing.module';
 import { FilmFormsService } from './film-forms.service';
+//import { Film } from './film-form';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,7 @@ import { FilmFormsService } from './film-forms.service';
         CommonModule,
         FilmFormsRoutingModule
      ],
-    exports: [],
+    //exports: [ Film],
     providers: [ FilmFormsService],
 })
 export class FilmFormsModule {}

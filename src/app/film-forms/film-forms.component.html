@@ -1,8 +1,13 @@
-<p> Lista de Filmes: </p>
-<div class="collection">
-    <a  *ngFor ="let filmForm of filmsForms" class="collection-item">
-        {{ filmForm.name }}
-    </a>
-  </div>
-<router-outlet></router-outlet>
-
+<div class="row">
+    <div class="col s6">
+        <p> Lista de Filmes: </p>
+        <div class="collection">
+            <a *ngFor ="let filmForm of filmsForms" class="collection-item" [routerLink]="[filmForm.id]">
+                {{ filmForm.name }}
+            </a>
+        </div>
+    </div>
+    <div class="col s6">
+        <router-outlet></router-outlet>
+    </div>
+</div>
