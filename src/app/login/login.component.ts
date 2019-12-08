@@ -9,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   
-  private usuario: Usuario = new Usuario();
+  usuario: Usuario = new Usuario();
 
   constructor(private authService: AuthService) { }
 
