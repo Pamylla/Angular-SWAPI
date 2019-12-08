@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'
 
 import { FilmFormsComponent } from './film-forms.component';
 import { FormComponent } from './form/form.component';
@@ -16,6 +17,7 @@ import { FilmFormsService } from './film-forms.service';
     ],
     imports: [ 
         CommonModule,
+        FormsModule, 
         FilmFormsRoutingModule
      ],
     //exports: [ Film],

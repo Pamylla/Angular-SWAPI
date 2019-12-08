@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -10,6 +11,8 @@ import { FilmFormsRoutingModule } from './film-forms/film-forms.routing.module';
 import { DetailComponent } from './film-forms/detail/detail.component';
 import { FormComponent } from './film-forms/form/form.component';
 import { FilmFormsComponent } from './film-forms/film-forms.component';
+import { AuthService } from './login/auth.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +20,7 @@ import { FilmFormsComponent } from './film-forms/film-forms.component';
     HomeComponent,
     FilmFormsComponent,
     DetailComponent,
+    LoginComponent,
     FormComponent
   ],
   imports: [
@@ -25,9 +29,11 @@ import { FilmFormsComponent } from './film-forms/film-forms.component';
     FilmsModule, 
     FilmFormsRoutingModule,
     AppRoutingModule,
+    FormsModule,
     routing
   ],
   providers: [
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

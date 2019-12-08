@@ -33,6 +33,10 @@ export class DetailComponent implements OnInit, OnDestroy {
 
   }
 
+  editarFilme(){
+    this.router.navigate(['/film-form', this.filmsForms.id, 'edit']);
+  }
+
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }

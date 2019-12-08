@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { FilmFormsService } from '../film-forms.service';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +10,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
-  constructor() { }
+  
+  filmsForms: any = {};
+  subscription: Subscription;
+
+  constructor(
+
+    private route: ActivatedRoute,
+    //private router: Router,
+    private filmFormsService : FilmFormsService
+
+  ) { }
 
   ngOnInit() {
+    this.subscription = this.route.params.subscribe(
+      (params: any) => {
+        let id = params['id'];
+
+        this.filmsForms = this.filmFormsService.getFilmForm(id);
+
+        if (this.filmsForms === null){
+          this.filmsForms = {};
+        }
+      }
+    );
+
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
 }
