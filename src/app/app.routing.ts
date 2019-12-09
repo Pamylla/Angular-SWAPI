@@ -10,10 +10,10 @@ import { FilmNotFindComponent } from './films/film-not-find/film-not-find.compon
 
 //CREATE ROUTES - FROM APLICATION
 
-const appRoutes : Routes = [
-    { path: 'login', component: LoginComponent},
+const appRoutes : Routes = [   
     { path: 'films', component: FilmsComponent},
     { path: 'film/:id', component: FilmDetailComponent},
+    { path: 'login', component: LoginComponent},
     { path: 'notFound', component: FilmNotFindComponent},
     { path: '', component: HomeComponent}
 ];

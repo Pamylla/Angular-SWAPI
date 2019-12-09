@@ -31,7 +31,7 @@ export class FilmDetailComponent implements OnInit {
         this.id = params['id'];
 
         //GET FILM BY ID
-        this.film = this.filmsService.getFilm(params['id']);
+        this.getFilm(params['id']);
 
         //NOT FOUND FILM
         if (this.film == null){
@@ -39,6 +39,10 @@ export class FilmDetailComponent implements OnInit {
         }
 
       });
+  }
+
+  async getFilm(id){
+    this.film = await this.filmsService.getFilm(id);
   }
 
 ngOnDestroy() {

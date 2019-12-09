@@ -1,8 +1,10 @@
 <h4>Detalhes dos Filmes!</h4>
 
 <p> Id: {{ filmsForms.id }}</p>
-<p> Nome: {{ filmsForms.name }}</p>
-<p> Episode: {{ filmsForms.episode }}</p>
+<h3> Name: {{ filmsForms.name }}</h3>
+<p> Episode: {{ filmsForms.episode_id }}</p>
+<p>  {{ filmsForms.opening_crawl}} </p>
+<p> Release Date: {{ filmsForms.release_date}} </p>
 
 <a class="waves-effect waves-light btn" (click)="editarFilme()"> Editar Filme </a>
 

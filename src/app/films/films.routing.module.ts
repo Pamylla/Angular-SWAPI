@@ -1,7 +1,7 @@
 //JUST HAVE IMPORTS USED BY FILMS
 
 import { NgModule } from '@angular/core';
-import { Component, ModuleWithProviders } from '@angular/core';
+import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { FilmsComponent } from './films.component';
@@ -11,12 +11,12 @@ import { FilmNotFindComponent } from './film-not-find/film-not-find.component';
 //CREATE ROUTES - FROM APLICATION
 
 const filmsRoutes : Routes = [
-    { path: 'films', component: FilmsComponent},
-    { path: 'film/:id', component: FilmDetailComponent},
-    { path: 'notFound', component: FilmNotFindComponent}
+    { path: '', component: FilmsComponent},
+    { path: 'notFound', component: FilmNotFindComponent},
+    { path: ':id', component: FilmDetailComponent}
 ];
 
-export const routing: ModuleWithProviders = RouterModule.forRoot(filmsRoutes);
+//export const routing: ModuleWithProviders = RouterModule.forChild(filmsRoutes);
 
 
 @NgModule({

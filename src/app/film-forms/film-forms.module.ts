@@ -20,7 +20,7 @@ import { FilmFormsService } from './film-forms.service';
         FormsModule, 
         FilmFormsRoutingModule
      ],
-    //exports: [ Film],
+    exports: [],
     providers: [ FilmFormsService],
 })
 export class FilmFormsModule {}

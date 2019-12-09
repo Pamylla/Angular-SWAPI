@@ -5,15 +5,16 @@ import { Injectable } from '@angular/core';
 })
 export class FilmsService {
   
-  getFilms(){
-    return[ 
-      {id: 1, name: 'Return of Jedi'},
+  getFilms(): Promise<any[]> {
+    console.debug('foi');
+    return Promise.resolve([ 
+      {id: 1, name: 'A New Hope'},
       {id: 2, name: 'Return of Jedi Cabuloso'}
-    ]
+    ])
   }
 
-  getFilm(id: number){
-    let films = this.getFilms()
+  async getFilm(id: number): Promise<any>{
+    let films = await this.getFilms()
     for (let i = 0; i < films.length; i++) {
       let film = films[i];
       if (film.id == id){

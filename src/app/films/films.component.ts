@@ -17,8 +17,12 @@ export class FilmsComponent implements OnInit {
   constructor( private filmsService: FilmsService) { }
 
   ngOnInit() {
-    this.films = this.filmsService.getFilms();
+    this.getFilms();
       }
+
+    async getFilms(){
+      this.films = await this.filmsService.getFilms();
+    }
 
   }
 
