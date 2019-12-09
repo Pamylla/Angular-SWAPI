@@ -1,4 +1,5 @@
 import { AuthService } from './login/auth.service';
+import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 
 @Component({
@@ -11,7 +12,7 @@ export class AppComponent {
 
   mostrarMenu: boolean = false;
 
-  constructor(private authService: AuthService){
+  constructor(private authService: AuthService, private http: HttpClient){
 
   }
 

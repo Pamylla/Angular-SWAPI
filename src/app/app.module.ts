@@ -1,43 +1,37 @@
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-//import { routing } from './app.routing';
 import { AppRoutingModule } from './app.routing.module';
-//import { FilmsModule } from './films/films.module';
-//import { FilmFormsRoutingModule } from './film-forms/film-forms.routing.module';
-//import { DetailComponent } from './film-forms/detail/detail.component';
-//import { FormComponent } from './film-forms/form/form.component';
-//import { FilmFormsComponent } from './film-forms/film-forms.component';
 import { AuthService } from './login/auth.service';
-
 import { AuthGuard } from './guards/auth-guard';
 import { FilmsGuard } from './guards/films.guards';
 import { FilmFormsGuard } from './guards/film-forms.guards';
+import { DataService } from './home/data.service';
+//import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    //FilmFormsComponent,
-    //DetailComponent,
-    //FormComponent
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    //FilmsModule, 
-    //FilmFormsRoutingModule,
     AppRoutingModule,
-    //routing
+    HttpClientModule,
+    //HttpClient 
   ],
   providers: [
     AuthService,
+    DataService,
     AuthGuard,
     FilmsGuard,
     FilmFormsGuard

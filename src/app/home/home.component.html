@@ -1,1 +1,19 @@
-<p>home works!</p>
+<div class = "container" >
+    <div class="col s8" style="margin-top: 20px; text-align: center;">
+        <br><h3>Olá Bem vindo!</h3>
+        <br> 
+        <br> Este é resultado do desafio de Front-end da empresa Audaces.
+        <br> Realizado por Pâmylla Ostermann
+
+
+
+    <!-- Abaixo era para aparecer uma lista dos filmes -->
+    <div *ngFor= 'let movie of movies$' style="text-align: center;">
+        <h2> {{ movie.title }} </h2>
+        <p>{{ movie.episode_id }} </p>   
+        <p> {{ movie.opening_crawl }} </p> 
+        <p> {{ movie.release_date }} </p> 
+    </div>
+    </div>
+</div>
+

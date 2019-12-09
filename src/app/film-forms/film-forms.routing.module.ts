@@ -9,7 +9,7 @@ const filmFormsRoutes = [
         children : [
             { path: 'new', component: FormComponent },
             { path: ':id', component: DetailComponent },
-            { path: ':id/edit', component: FormComponent },
+            { path: 'edit', component: FormComponent },
             
     ] },
 
